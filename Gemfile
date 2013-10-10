@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-
 gem 'rails', '3.2.13'
 
 # Bundle edge Rails instead:
@@ -31,7 +30,8 @@ ruby '1.9.3'
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
 # To use Jbuilder templates for JSON
-# gem 'jbuilder'
+gem 'jbuilder', '1.0.2'
+gem 'turbolinks', '1.1.1'
 
 # Use unicorn as the app server
 # gem 'unicorn'
@@ -41,3 +41,12 @@ ruby '1.9.3'
 
 # To use debugger
 # gem 'debugger'
+
+group :doc do
+  gem 'sdoc', '0.3.20', require: false
+end
+
+group :production do
+  gem 'pg', '0.15.1'
+  gem 'rails_12factor', '0.0.2'
+end
